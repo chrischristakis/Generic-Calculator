@@ -144,7 +144,7 @@ equalBtn.addEventListener("click", () => {
    }
    output.value = value;
 
-   if(operation == Operation.DIV || num2 == 0)
+   if(operation == Operation.DIV && num2 == 0)
      output.value = "Are you trying to be funny?"
 
    num1 = value + "";

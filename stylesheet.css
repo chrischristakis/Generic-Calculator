@@ -10,10 +10,8 @@ body {
 
 p.info {
   margin:0;
-  position: absolute;
   font-family: customFont, monospace;
   color: gray;
-  bottom: 0%;
 }
 
 #calculator > #add, #calculator > #divide,#calculator >  #sub, #calculator > #mul, #calculator > #mod {

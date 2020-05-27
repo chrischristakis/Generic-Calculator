@@ -71,10 +71,17 @@ p.info {
 
 @media (max-width: 600px) {
   body {
-    background-color: white;
+    background-color: cyan;
+  }
+  #calculator > * {
+    font-family: customFont, monospace;
+    font-size: 1.7em;
+    margin: 6px;
+    border-radius: 10px;
   }
   #calculator {
     width: 300px;
+    height: 500px;
     background-image: white !important;
     margin-left: -150px;
   }

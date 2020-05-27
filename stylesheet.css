@@ -8,12 +8,6 @@ body {
   src: url(fonts/Cairo-Light.ttf);
 }
 
-@media only screen and (max-width: 600px) {
-  #calculator {
-    width: 300px;
-  }
-}
-
 p.info {
   margin:0;
   position: absolute;
@@ -75,4 +69,12 @@ p.info {
   border-radius: 20px;
   background-color: #8b929e;
   background-image: linear-gradient(45deg,#b487c4, #99ffff);
+}
+
+@media screen and (max-width: 600px) {
+  #calculator {
+    width: 300px;
+    background-image: white !important;
+    margin-left: -150px;
+  }
 }

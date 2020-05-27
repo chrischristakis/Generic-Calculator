@@ -1,0 +1,64 @@
+body {
+  margin:0;
+  background-color:#262626;
+}
+
+@font-face {
+  font-family: customFont;
+  src: url(fonts/Cairo-Light.ttf);
+}
+
+#calculator > #add, #calculator > #divide,#calculator >  #sub, #calculator > #mul, #calculator > #mod {
+  background-color: orange;
+}
+
+#calculator > #equal, #calculator >  #decimal, #calculator >  #clear {
+  background-color: #6bc8fa;
+}
+
+#calculator > #clear {
+  grid-column: 1/4;
+}
+
+#calculator > * {
+  font-family: customFont, monospace;
+  font-size: 2em;
+  margin: 6px;
+  border-radius: 10px;
+}
+
+#calculator > button {
+  background-color: white;
+  text-decoration: none;
+  outline: none;
+  border:0;
+}
+
+#calculator > button:active {
+  background-color: gray !important;
+}
+
+#calculator > input {
+  grid-column: 1/5;
+  text-align: right;
+  border:0;
+  outline:none;
+}
+
+#calculator {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  padding: 15px;
+
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  left:50%;
+  top:50%;
+  margin-left: -200px;
+  margin-top: -300px;
+  border-radius: 20px;
+  background-color: #8b929e;
+  background-image: linear-gradient(45deg,#b487c4, #99ffff);
+}

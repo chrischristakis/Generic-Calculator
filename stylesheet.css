@@ -70,6 +70,9 @@ p.info {
 }
 
 @media (max-width: 600px) {
+  body {
+    background-color: white;
+  }
   #calculator {
     width: 300px;
     background-image: white !important;

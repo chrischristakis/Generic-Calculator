@@ -65,12 +65,12 @@ body {
 
 @media (max-width: 600px) {
   body {
-    background-color: red;
+    background-color: white;
   }
   #calculator > * {
     font-family: customFont, monospace;
     font-size: 1.7em;
-    margin: 6px;
+    margin: 1%;
     border-radius: 10px;
   }
   #calculator {
@@ -81,6 +81,6 @@ body {
     margin-left: -39%;
     margin-top: -65%;
     background-image: white !important;
-    padding: 2%;
+    padding: 0;
   }
 }

@@ -143,6 +143,10 @@ equalBtn.addEventListener("click", () => {
       oldNum = "";
    }
    output.value = value;
+
+   if(operation == Operation.DIV || num2 == 0)
+     output.value = "Are you trying to be funny?"
+
    num1 = value + "";
    oldNum = num2 + "";
    num2 = "";

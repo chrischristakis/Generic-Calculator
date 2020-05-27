@@ -35,22 +35,27 @@ for(const num of numbers)
 }
 
 add.addEventListener("click", () => {
+  if(!firstNumber && num1 != "" && num2 != "") equalOp();
   operation = Operation.ADD;
   firstNumber = false;
 });
 div.addEventListener("click", () => {
+  if(!firstNumber && num1 != "" && num2 != "") equalOp();
   operation = Operation.DIV;
   firstNumber = false;
 });
 sub.addEventListener("click", () => {
+  if(!firstNumber && num1 != "" && num2 != "") equalOp();
   operation = Operation.SUB;
   firstNumber = false;
 });
 mul.addEventListener("click", () => {
+  if(!firstNumber && num1 != "" && num2 != "") equalOp();
   operation = Operation.MUL;
   firstNumber = false;
 });
 mod.addEventListener("click", () => {
+  if(!firstNumber && num1 != "" && num2 != "") equalOp();
   operation = Operation.MOD;
   firstNumber = false;
 });
@@ -92,11 +97,18 @@ function clearValues()
 {
   num1 = "";
   num2 = "";
+  oldNum = "";
   output.value = "";
+  operation = null;
   firstNumber = true;
 }
 
 equalBtn.addEventListener("click", () => {
+  equalOp();
+ });
+
+ function equalOp()
+ {
    if(num2 == "") num2 = oldNum; //if you repeat click '='
    if(num1.indexOf('.') == -1 && num2.indexOf('.') == -1) //Not a decimal.
    {
@@ -108,8 +120,7 @@ equalBtn.addEventListener("click", () => {
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
    }
-   let value = NaN;
-   let nothing = false;
+   let value = num1;
    switch(operation)
    {
     case Operation.ADD:
@@ -129,13 +140,11 @@ equalBtn.addEventListener("click", () => {
       break;
     default: //they only pressed equals without a num2 or expression
       console.log("EXPRESSION ERROR");
-      value = num1;
-      nothing = true;
+      oldNum = "";
    }
    output.value = value;
    num1 = value + "";
    oldNum = num2 + "";
    num2 = "";
-   firstNumber = nothing;
-
- });
+   firstNumber = false;
+ }

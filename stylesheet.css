@@ -64,9 +64,6 @@ body {
 }
 
 @media (max-width: 600px) {
-  body {
-    background-color: white;
-  }
   #calculator > * {
     font-family: customFont, monospace;
     font-size: 1.7em;
@@ -76,10 +73,8 @@ body {
   #calculator {
     width: 70%;
     height: 70%;
-    left:50%;
-    top:50%;
     margin-left: -35%;
-    margin-top: -35%;
+    margin-top: -50%;
     background-image: white !important;
     padding: 1.0%;
   }

@@ -8,12 +8,6 @@ body {
   src: url(fonts/Cairo-Light.ttf);
 }
 
-p.info {
-  margin:0;
-  font-family: customFont, monospace;
-  color: gray;
-}
-
 #calculator > #add, #calculator > #divide,#calculator >  #sub, #calculator > #mul, #calculator > #mod {
   background-color: orange;
 }
@@ -71,7 +65,7 @@ p.info {
 
 @media (max-width: 600px) {
   body {
-    background-color: cyan;
+    background-color: red;
   }
   #calculator > * {
     font-family: customFont, monospace;
@@ -80,9 +74,12 @@ p.info {
     border-radius: 10px;
   }
   #calculator {
-    width: 300px;
-    height: 500px;
+    width: 70%;
+    height: 70%;
+    left:50%;
+    top:50%;
+    margin-left: -39%;
+    margin-top: -65%;
     background-image: white !important;
-    margin-left: -150px;
   }
 }
